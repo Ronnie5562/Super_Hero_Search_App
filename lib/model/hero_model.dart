@@ -1,19 +1,11 @@
 class HeroListModel {
   final String name;
-  // final String lgImage;
-  // final String mdImage;
-  // final String smImage;
-
   final String imageUrl;
   final String realName;
   final String publisher;
 
   HeroListModel({
     required this.name,
-    // required this.lgImage,
-    // required this.mdImage,
-    // required this.smImage,
-
     required this.imageUrl,
     required this.realName,
     required this.publisher,
@@ -22,10 +14,6 @@ class HeroListModel {
   factory HeroListModel.fromMap(Map<String, dynamic> map) {
     return HeroListModel(
       name: map['name'],
-      // lgImage: map['images']['lg'],
-      // mdImage: map['images']['md'],
-      // smImage: map['images']['sm'],
-
       imageUrl: map['image']['url'],
       realName: map['biography']['full-name'],
       publisher: map['biography']['publisher'],
@@ -44,11 +32,6 @@ class HeroListModel {
 
 class HeroDetailModel {
   final String name;
-
-  // Images
-  // final String lgImage;
-  // final String mdImage;
-  // final String smImage;
   final String imageUrl;
 
   // Biography
@@ -72,9 +55,6 @@ class HeroDetailModel {
 
   HeroDetailModel({
     required this.name,
-    // required this.lgImage,
-    // required this.mdImage,
-    // required this.smImage,
     required this.imageUrl,
     required this.realName,
     required this.publisher,
@@ -94,9 +74,6 @@ class HeroDetailModel {
   factory HeroDetailModel.fromMap(Map<String, dynamic> map) {
     return HeroDetailModel(
       name: map['name'],
-      // lgImage: map['images']['lg'],
-      // mdImage: map['images']['md'],
-      // smImage: map['images']['sm'],
       imageUrl: map['image']['url'],
       realName: map['biography']['full-name'],
       publisher: map['biography']['publisher'],
@@ -117,11 +94,6 @@ class HeroDetailModel {
   Map<String, dynamic> toMap() {
     return {
       'name': name,
-      // 'images': {
-      //   'lg': lgImage,
-      //   'md': mdImage,
-      //   'sm': smImage,
-      // },
       'imageUrl': imageUrl,
       'biography': {
         'fullName': realName,

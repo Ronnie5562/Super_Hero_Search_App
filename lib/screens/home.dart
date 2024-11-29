@@ -81,7 +81,7 @@ class _HomeState extends State<Home> {
                               hero.imageUrl,
                               fit: BoxFit.cover,
                               width: double.infinity,
-                              height: 350, // Adjust height as needed
+                              height: 350,
                             ),
                           ),
                           const SizedBox(
